@@ -803,12 +803,12 @@ status_t MPEG4Writer::start(MetaData *param) {
         mIsFileSizeLimitExplicitlyRequested = true;
     }
 
-    int32_t use64BitOffset;
-    if (param &&
-        param->findInt32(kKey64BitFileOffset, &use64BitOffset) &&
-        use64BitOffset) {
+    // int32_t use64BitOffset;
+    // if (param &&
+    //     param->findInt32(kKey64BitFileOffset, &use64BitOffset) &&
+    //     use64BitOffset) {
         mUse32BitOffset = false;
-    }
+    // }
 
     if (mUse32BitOffset) {
         // Implicit 32 bit file size limit
